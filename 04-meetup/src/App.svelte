@@ -19,7 +19,7 @@
             title: 'Coding Bootcamp',
             subtitle: 'Learn to code in 2 hours',
             description: 'In this meetup, we will have some xperts who will teach you coding',
-            imageUrl: 'https://techcrunch.com/wp-content/uploads/2015/04/codecode.jpg',
+            imageUrl: 'https://media.wired.com/photos/5cc244cc2c90a35c66b7d930/master/w_2560%2Cc_limit/Coding-Becomes-Criminal.jpg',
             address: '27th Nerd Road, 32546 New York',
             contactEmail: 'code@test.com'
 

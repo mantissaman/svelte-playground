@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "../Modal.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n    import {createEventDispatcher} from 'svelte';\n\n    let dispatch = createEventDispatcher();\n    let agreed = false;\n\n</script>\n\n<style>\n    .backdrop {\n        position: fixed;\n        top: 0;\n        left: 0;\n        width: 100%;\n        height: 100vh;\n        background: rgba(0, 0, 0, 0.75);\n        z-index: 10;\n    }\n\n    .modal {\n        padding: 1rem;\n        position: fixed;\n        top: 10vh;\n        left: 10%;\n        width: 80%;\n        max-height: 80vh;\n        background: white;\n        border-radius: 5px;\n        z-index: 100;\n        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);\n        overflow: scroll;\n    }\n    header{\n        border-bottom: 1px solid #ccc;\n    }\n</style>\n\n<div class=\"backdrop\" on:click=\"{() => dispatch('cancel')}\"/>\n<div class=\"modal\">\n    <header>\n        <slot name=\"header\" />\n    </header>\n    <div>\n        <slot />\n    </div>\n    <div class=\"disclaimer\">\n        <p>Before you close, you need to agree to our terms</p>\n        <button on:click={() => agreed= true}>Agree</button>\n    </div>\n    <footer>\n        <slot name=\"footer\" didAgree={agreed}>\n            <button on:click=\"{() => dispatch('close')}\" disabled={!agreed}>Close</button>\n        </slot>\n    </footer>\n    \n</div>\n"
+  ],
+  "names": [],
+  "mappings": "AASI,SAAS,cAAC,CAAC,AACP,QAAQ,CAAE,KAAK,CACf,GAAG,CAAE,CAAC,CACN,IAAI,CAAE,CAAC,CACP,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,KAAK,CACb,UAAU,CAAE,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAC/B,OAAO,CAAE,EAAE,AACf,CAAC,AAED,MAAM,cAAC,CAAC,AACJ,OAAO,CAAE,IAAI,CACb,QAAQ,CAAE,KAAK,CACf,GAAG,CAAE,IAAI,CACT,IAAI,CAAE,GAAG,CACT,KAAK,CAAE,GAAG,CACV,UAAU,CAAE,IAAI,CAChB,UAAU,CAAE,KAAK,CACjB,aAAa,CAAE,GAAG,CAClB,OAAO,CAAE,GAAG,CACZ,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CACzC,QAAQ,CAAE,MAAM,AACpB,CAAC,AACD,oBAAM,CAAC,AACH,aAAa,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,AACjC,CAAC"
+}

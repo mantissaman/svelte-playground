@@ -1796,9 +1796,9 @@ var app = (function () {
     			t7 = space();
     			create_component(meetupgrid.$$.fragment);
     			attr_dev(form, "class", "svelte-1qhcl4c");
-    			add_location(form, file$5, 66, 4, 1825);
+    			add_location(form, file$5, 66, 4, 1870);
     			attr_dev(main, "class", "svelte-1qhcl4c");
-    			add_location(main, file$5, 65, 0, 1814);
+    			add_location(main, file$5, 65, 0, 1859);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1923,7 +1923,7 @@ var app = (function () {
     			title: "Coding Bootcamp",
     			subtitle: "Learn to code in 2 hours",
     			description: "In this meetup, we will have some xperts who will teach you coding",
-    			imageUrl: "https://techcrunch.com/wp-content/uploads/2015/04/codecode.jpg",
+    			imageUrl: "https://media.wired.com/photos/5cc244cc2c90a35c66b7d930/master/w_2560%2Cc_limit/Coding-Becomes-Criminal.jpg",
     			address: "27th Nerd Road, 32546 New York",
     			contactEmail: "code@test.com"
     		},
